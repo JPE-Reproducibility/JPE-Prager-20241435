@@ -54,7 +54,9 @@ vars = YAML.load_file(joinpath(ENV["GITHUB_WORKSPACE"], "_variables.yml"))
 @info "Configuration loaded" vars
 
 # Construct paths
-dropbox_base = get(ENV, "DROPBOX_BASE", joinpath(ENV["HOME"], "Dropbox"))
+# HARDCODED PATHS - change these if runner setup changes
+const DROPBOX_BASE = "/Users/florianoswald/Dropbox/Apps/JPE-packages"
+
 source_path = joinpath(dropbox_base, vars["dropbox_rel_path"], "replication-package")
 dest_path = joinpath(ENV["GITHUB_WORKSPACE"], "replication-package")
 

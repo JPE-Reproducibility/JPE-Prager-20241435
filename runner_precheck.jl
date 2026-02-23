@@ -89,8 +89,8 @@ try
     if isdir(dest_path)
         rm(dest_path; recursive=true, force=true)
     end
-    
-    cp(source_path, dest_path; force=true)
+    @warn "using PackageScanner.mycp as workaround here"
+    PackageScanner.mycp(source_path, dest_path; recursive = true, force=true)
     
     elapsed = time() - start_time
     @info "✓ Package copied successfully in $(round(elapsed, digits=2)) seconds"

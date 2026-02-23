@@ -1,6 +1,8 @@
-title: "Stand-in title"
-author: "Dr Prof James 'JayJay' Author"
-paper_id: 12345678
+title: "Collusion Through Common Leadership"
+author: "Prager"
 round: 1
-repo: "https://www.github.com/standin"
-dropbox_rel_path: "JPE/Author-12345678/1"
+repo: "https://github.com/JPE-Reproducibility/JPE-Prager-20241435"
+paper_id: 20241435
+journal: "JPE"
+paper_slug: "Prager-20241435"
+dropbox_rel_path: "JPE/Prager-20241435/1"

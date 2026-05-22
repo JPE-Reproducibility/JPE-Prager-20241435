@@ -92,8 +92,7 @@ For any data that cannot be provided as part of the replication package, please 
 -   [ ] Data are not cited, but a working paper, article, or other document is cited (not a data citation)
 -   [x] Data are cited
     -   [x] in the manuscript
-    -   [x] in the README:
-    \> Herrera-Caicedo, Alejandro, Jessica Jeffers, and Elena Prager (Accepted). "Collusion Through Common Leadership." *Journal of Political Economy*.
+    -   [x] in the README: \> Herrera-Caicedo, Alejandro, Jessica Jeffers, and Elena Prager (Accepted). "Collusion Through Common Leadership." *Journal of Political Economy*.
 
 ## 2. Kappa Weights for Common Ownership (public_scrape_kappas_1999–2017.parquet)
 
@@ -107,8 +106,7 @@ For any data that cannot be provided as part of the replication package, please 
 -   [ ] Data are not cited, but a working paper, article, or other document is cited (not a data citation)
 -   [x] Data are cited
     -   [x] in the manuscript
-    -   [x] in the README:
-    \> Backus, Matthew, Christopher Conlon, and Michael Sinkinson (2021). "Common Ownership in America: 1980–2017." *American Economic Journal: Microeconomics*, Vol. 13, No. 3, pp. 273–308.
+    -   [x] in the README: \> Backus, Matthew, Christopher Conlon, and Michael Sinkinson (2021). "Common Ownership in America: 1980–2017." *American Economic Journal: Microeconomics*, Vol. 13, No. 3, pp. 273–308.
 
 ## 3. Text-Based Network Industry Classifications (tnic3_data.txt)
 
@@ -120,8 +118,7 @@ For any data that cannot be provided as part of the replication package, please 
 -   [ ] Data are not cited, but a working paper, article, or other document is cited (not a data citation)
 -   [x] Data are cited
     -   [x] in the manuscript
-    -   [x] in the README:
-    \> Hoberg, Gerard and Gordon Phillips (2016). "Text-Based Network Industries and Endogenous Product Differentiation." *Journal of Political Economy*, Vol. 124, No. 5, pp. 1423–1465.
+    -   [x] in the README: \> Hoberg, Gerard and Gordon Phillips (2016). "Text-Based Network Industries and Endogenous Product Differentiation." *Journal of Political Economy*, Vol. 124, No. 5, pp. 1423–1465.
 
 ## 4. BoardEx (NA files / wrds_boardex_na.csv / wrds_boardex_compustat_link.csv)
 
@@ -165,29 +162,91 @@ For any data that cannot be provided as part of the replication package, please 
 -   [ ] Data are not cited, but a working paper, article, or other document is cited (not a data citation)
 -   [x] Data are cited
     -   [x] in the manuscript
-    -   [x] in the README (Ge et al. component only; BrightData scrape has no associated citation):
-    \> Ge, Chunmian, Ke-Wei Huang, and Ivan P. L. Png (2016). "Engineer/scientist careers: Patents, online profiles, and misclassification bias." *Strategic Management Journal*, Vol. 37, No. 1, pp. 232–253.
+    -   [x] in the README (Ge et al. component only; BrightData scrape has no associated citation): \> Ge, Chunmian, Ke-Wei Huang, and Ivan P. L. Png (2016). "Engineer/scientist careers: Patents, online profiles, and misclassification bias." *Strategic Management Journal*, Vol. 37, No. 1, pp. 232–253.
 
 # Requirements
 
 -   [x] README is in TXT, MD, or PDF format
 -   [x] README is accessible at the root of the package (not inside a folder)
--   [ ] Title conforms to guidance (starts with "Data and Code for: Title of Paper" or "Code for: Title of Paper", is properly capitalized)
--   [ ] Authors (with affiliations) are listed in the same order as on the paper
-
-> {REQUIRED} Please review the title of the deposit as per our guidelines.
-
-> {REQUIRED} Please review authors and affiliations on the deposit. In general, they are the same, and in the same order, as for the manuscript; however, authors can deviate from that order.
+-   [x] Title conforms to guidance (starts with "Data and Code for: Title of Paper" or "Code for: Title of Paper", is properly capitalized)
+-   [x] Authors (with affiliations) are listed in the same order as on the paper
 
 ## Stated Requirements
 
 -   [ ] No requirements specified
 -   [x] Software Requirements specified as follows:
-    -   3.1.1 Stata Version: 17 Packages: estout version 3.24, as of April 30 2021. The package can be installed using the code `ssc install estout`.
-    -   3.1.2 Python Version: anaconda3/2023.07-2 Packages: No additional packages were used beyond those native to the Anaconda 3 distribution.
-    -   3.1.3 R Version: 4.1.1 Packages: The following R packages were used. Each item in this list is one package, with the package version indicated as packagename_version after the underscore. The master code file includes code for installing (current versions of) these packages. `wordnet_0.1-17` `stringdist_0.9.8` `tm_0.7-8` `NLP_0.2-1` `quanteda_3.2.1` `stringi_1.7.12` `doParallel_1.0.17` `iterators_1.0.14` `foreach_1.5.2` `lubridate_1.8.0` `xml2_1.3.3` `haven_2.4.3` `DIDmultiplegtDYN_1.0.15` `did_2.1.2` `bacondecomp_0.1.1` `fixest_0.11.2` `coxme_2.2-18.1` `bdsmatrix_1.3-4` `timereg_2.0.2` `lfe_2.9-0` `Matrix_1.6-4` `survival_3.7-0` `gridExtra_2.3` `hrbrthemes_0.8.0` `openxlsx_4.2.5.2` `forcats_0.5.1` `dplyr_1.1.4` `purrr_1.0.2` `readr_2.1.2` `tidyr_1.3.1` `tibble_3.2.1` `ggplot2_3.5.1` `tidyverse_1.3.1` `plyr_1.8.6` `readxl_1.3.1` `stringr_1.5.0` `zoo_1.8-10` `bit64_4.0.5` `bit_4.0.5` `data.table_1.14.2`
--   [x] Computational Requirements specified as follows:
-    -   The code was last run on a Linux server with 32 cores and 768GB of RAM. The code relies on no to minimal parallelization. Approximately 600GB of free space is required, including the space needed to save the replication packet and the additional data received from the data sources in Section 2.3. The free space requirement rises to approximately 1.5TB if including raw LinkedIn data rather than relying on the simulated LinkedIn data provided in the replication packet.
+      ### 3.1.1 Stata
+      
+      Version: 17  
+      Packages: `estout` version 3.24, as of April 30 2021. `mdesc` version 2.1, as of August 25 2011.
+      
+      The packages are installed automatically in the code file `master_Stata_code.do` using the code:
+      
+      ```stata
+      cap ssc install <packagename>
+      ```
+      
+      ---
+      
+      ### 3.1.2 Python
+      
+      Distribution: `anaconda3/2023.07-2`  
+      Version: python 3.11.15
+      
+      Packages: Local environments for Windows with the appropriate versions of needed packages are provided as part of this replication kit in `/Code/python_env`. The code file `/Code/master_R_code.R`, from which Python code should be run, automatically points to this directory. The following packages are provided:
+      
+      ```text
+      pyarrow 11.0.0, scikit-learn 1.3.0, openpyxl 3.0.10, fastparquet 2026.3.0, sklearn 1.8.0
+      ```
+      
+      Alternatively, the user can install these packages using:
+      
+      ```bash
+      pip install package_name==[version]
+      ```
+      
+      (e.g. `pip install pyarrow==11.0.0`).
+      
+      ---
+      
+      ### 3.1.3 R
+      
+      Version: 4.1.1
+      
+      Packages: Local environments for Windows with the appropriate versions of needed packages are provided as part of this replication kit in `/Code/r_libraries`. The code file `/Code/master_R_code.R`, from which R code should be run, automatically points to this directory. The following R packages were used. Each item in this list is one package, with the package version indicated as `packagename_version` after the underscore. The following packages are provided:
+      
+      ```text
+      wordnet_0.1-17, stringdist_0.9.8, tm_0.7-8, NLP_0.2-1, quanteda_3.2.1, stringi_1.7.12,
+      doParallel_1.0.17, iterators_1.0.14, foreach_1.5.2, lubridate_1.8.0, xml2_1.3.3,
+      DDImultiplegdYN_1.0.15, did_2.1.2, bacondecomp_0.1.1, fixest_0.11.2, coxme_2.2-18.1,
+      bdsmatrix_1.3-4, timereg_2.0.2, lfe_2.9-0, Matrix_1.6-4, survival_3.7-0, gridExtra_2.3,
+      hrbrthemes_0.8.0, openxlsx_4.2.5.2, forcats_0.5.1, dplyr_1.1.4, purrr_1.0.2, readr_2.1.2,
+      tidyr_1.3.1, tibble_3.2.1, ggplot2_3.5.1, tidyverse_1.3.1, plyr_1.8.6, readxl_1.3.1,
+      stringr_1.5.0, zoo_1.8-10, bit64_4.0.5, bit_4.0.5, data.table_1.14.2
+      ```
+      
+      Alternatively, the user can install these packages using:
+      
+      ```r
+      remotes::install_version("package", version = "package version")
+      ```
+      
+      ---
+      
+      ### 3.1.4 Python and R
+      
+      The packages and correct local environment for Python and R are automatically loaded in `master_R_code.R`. However, this only works in Windows. Other operating systems will have to install the proper libraries as specified above.
+      
+      Additional notes:
+      
+      - If using Windows, the `windows` flag in `master_R_code.R` should be set to `TRUE`; otherwise it should remain `FALSE`.
+      
+      - If using Linux, users need to modify `python_module` in `master_R_code.R` to match the location of their `anaconda3/2023.07-2` installation.
+      
+      - We have not tested implementation for macOS.
+      
+      - If needed or preferred, users can install the dependencies directly on their system instead of relying on the bundled libraries.-   [x] Computational Requirements specified as follows:
+          -   The code was last run on a Linux server with 32 cores and 768GB of RAM. The code relies on no to minimal parallelization. Approximately 600GB of free space is required, including the space needed to save the replication packet and the additional data received from the data sources in Section 2.3. The free space requirement rises to approximately 1.5TB if including raw LinkedIn data rather than relying on the simulated LinkedIn data provided in the replication packet.
 -   [x] Time Requirements specified as follows:
     -   Computation took approximately 24 hours. Approximately 16 hours of the total runtime is accounted for by a single code file, `/Code/Public Firms/public_firms_sumstats.do`, which produces Table 2.
 -   [x] Requirements are complete.
@@ -218,163 +277,138 @@ All figures, tables, and in-text numbers were successfully mapped to a specific 
 
 ## Computing Environment of the Replicator
 
--   MacBook Air (Intel) **OS**: macOS 14.5.0 (Darwin 24.5.0)
+-   Nuvolos 64vCU 256GB RAM machine on a Dynabook Inc., Windows 11 Pro 25H2.
 
 -   Stata 19.5
 
 -   R 4.5.2
 
--   Python 3.13.12
-
 # Replication
 
 -   Ran code as per README.
 
--   Had to install undocumented Stata package `mdesc`:
+-   Had to increase RAM of the machine several times (up to 256GB) until the Stata code could fully run.
 
-    ``` stata
-    ssc install mdesc
-    ```
-
--   The README does not specify the Python version used for the virtual environment.
-
--   Had to install undocumented Python packages:
-
-    ```         
-    pip install pyarrow fastparquet scikit-learn openpyxl
-    ```
-
--   `2_Get Kappas for BoardEx.py` caused the application to restart and could not be fully run.
-
--   All files named `boardex_connections_construct_v5_*.R` failed with the following error due to a space in the file path of `NA - Company Network - Augmented - subset 1990.csv`:
-
-    ``` r
-    Taking input= as a system command because it contains a space ('/files/JPE-Prager-20241435/ReducedPackage/Data/Output/BoardEx_analysis/NA - Company Network - Augmented - subset 1990.csv'). If it's a filename please remove the space, or use file= explicitly. A variable is being passed to input= and when this is taken as a system command there is a security concern if you are creating an app, the app could have a malicious user, and the app is not running in a secure environment; e.g. the app is running as root. Please read item 5 in the NEWS file for v1.11.6 for more information and for the option to suppress this message.
-    sh: 1: /files/JPE-Prager-20241435/ReducedPackage/Data/Output/BoardEx_analysis/NA: not found
-    Error in fread(paste0(dirbex, "/NA - Company Network - Augmented - subset 1990.csv")) : 
-      External command failed with exit code 127. This can happen when the disk is full in the temporary directory ('/tmp/RtmpmpAsRq'). See ?fread for the tmpdir argument.
-    In addition: Warning message:
-    In (if (.Platform$OS.type == "unix") system else shell)(paste0("(",  :
-      error in running command
-    ```
-
--   Had to install undocumented R package `hrbrthemes` via a non-standard method, as it is no longer available on CRAN:
-
-    ``` r
-    install.packages("remotes")
-    remotes::install_git("https://codeberg.org/hrbrmstr/hrbrthemes.git")
-    ```
-
--   Running `collusion_connections_regs_v7_replication.R` failed with the following error:
-
-    ``` r
-    Error in `[.data.table`(cnx_bal_firm, Agreement == 1, AgreementType_Notes) : 
-      j (the 2nd argument inside [...]) is a single symbol but column name 'AgreementType_Notes' is not found. If you intended to select columns using a variable in calling scope, please try DT[, ..AgreementType_Notes]. The .. prefix conveys one-level-up similar to a file system path.
-    In addition: Warning messages:
-    1: In rgl.init(initValue, onlyNULL) : RGL: unable to open X11 display
-    2: 'rgl.init' failed, will use the null device.
-    See '?rgl.useNULL' for ways to avoid this warning.
-    ```
-
--   Had to replace `../..` with `$dirbase` in all do files inside `Code/BroadEx Connections/`, as the relative paths were broken.
+- Code ran until completion.
 
 # Findings {#sec-findings}
 
-## Missing Requirements
-
--   [x] Software Requirements
-    -   [x] Stata
-        -   `mdesc` (undocumented, not listed in README)
-    -   [x] R
-        -   `hrbrthemes` (undocumented, not listed in README; no longer on CRAN, must be installed via `remotes::install_git("https://codeberg.org/hrbrmstr/hrbrthemes.git")`)
-    -   [x] Python
-        -   [x] Version (not specified in README)
-        -   `pyarrow` (undocumented, not listed in README)
-        -   `fastparquet` (undocumented, not listed in README)
-        -   `scikit-learn` (undocumented, not listed in README)
-        -   `openpyxl` (undocumented, not listed in README)
-
-> \[REQUIRED\] Please amend README to contain complete requirements.
-
-You can copy the section above, amended if necessary.
-
 ## Data Preparation Code
 
--   Program `import_boardex_na.do` could not be run, as it requires the proprietary BoardEx data (`wrds_boardex_na.csv`, `wrds_boardex_compustat_link.csv`). No output produced.
+-   Program `clean_compustat.do` was not rerun, as its outputs already existed in the package. The existing outputs are `Data/Output/compustat/clean_compustat.dta` and `Data/Output/compustat/crsp_header.dta`.
 
--   Program `compare_boardex_wrds.do` could not be run for the same reason. No output produced.
+-   Program `import_boardex_na.do` was not rerun, as its output already existed in the package. The existing output is `Data/Input/BoardEx-Compustat link/wrds_boardex_na_permco.dta`.
 
--   Program `clean_compustat.do` ran without error, producing `clean_compustat.dta` and `bex_cs_match.dta / bex_cs_match.csv`.
+-   Program `compare_boardex_wrds.do` was not rerun, as its outputs already existed in the package. The existing outputs are `Data/Output/compustat/bex_cs_match.dta` and `Data/Output/compustat/bex_cs_match.csv`.
 
--   Program `boardex_network_data_pull_replication.R` could not be run, as it requires the proprietary BoardEx raw files. No output produced.
+-   Program `1_Companyid_CUSIP Crosswalk.do` was not rerun, as its output already existed in the package. The existing output is `Data/Output/Public Firm Analysis/companyid_cusip_crosswalk.dta`.
 
--   Program `boardex_connections_construct_v5_replication.R` partially ran: the crosswalk files `BoardEx_FamilyID_trackable_2025.csv` and `LinkedIn_FamilyID_trackable_2025.csv` were produced. However, the program subsequently failed with an error caused by a space in the output file path `NA - Company Network - Augmented - subset 1990.csv`, which `data.table::fread` interpreted as a system command rather than a filename:
+-   Program `2_Get Kappas for BoardEx.py` was not rerun, as its final output already existed in the package. The existing output is `Data/Output/Public Firm Analysis/Annual Firmpair Kappas for BoardEx 2000-2017.dta`. The intermediate file `Data/Input/Common ownership/yearly_kappas_2000_2017.parquet` is internal to the script and was not needed for downstream replication.
 
-    ``` r
-    Error in fread(paste0(dirbex, "/NA - Company Network - Augmented - subset 1990.csv")) : 
-      External command failed with exit code 127.
-    ```
+-   Program `boardex_network_data_pull_replication.R` was not rerun, as its downstream outputs already existed in the package. The existing outputs include `Data/Output/BoardEx_analysis/NA - Company Network - Augmented - subset 1990.csv`, `Data/Output/BoardEx_analysis/All Regions - Company Details.csv`, `Data/Output/BoardEx_analysis/publicFirms_Skeleton.csv`, and `Data/Output/BoardEx_analysis/company_network_sample_2025.csv`. The larger file `Data/Output/BoardEx_analysis/NA - Company Network - Augmented.csv` was not required downstream.
 
-    As a result, `company_network_sample_2025.csv`, `publicFirms_Skeleton.csv`, and all downstream panel connection files were not produced.
+-   Programs `boardex_connections_construct_v5_replication.R`, `boardex_connections_construct_v5_AllSrVpsIN_replication.R`, `boardex_connections_construct_v5_AllSrVpsOUT_replication.R`, and `boardex_connections_construct_v5_CSuitSubset_replication.R` were not rerun, as their outputs already existed in the package. These include the relevant `panel_connections_sumcount_by_company_pairs_*_2025*.csv` files and the `panel_connections_by_row_*_2025.csv` files.
 
--   Programs `boardex_connections_construct_v5_AllSrVpsIN_replication.R`, `boardex_connections_construct_v5_AllSrVpsOUT_replication.R`, and `boardex_connections_construct_v5_CSuitSubset_replication.R` all failed with the same space-in-path error. No output produced.
+-   Program `individual_counts_v3_replication.R` was not rerun, as its outputs already existed in the package. The existing outputs are `Data/Output/BoardEx_analysis/firm_level_counts.csv` and `Data/Output/BoardEx_analysis/firm_level_counts_preaggregation.csv`.
 
--   Program `1_Companyid_CUSIP_Crosswalk.do` ran without error, producing `companyid_cusip_crosswalk.dta`.
+-   Program `Labor Market Distance/master.R` was not rerun, as its outputs already existed in the package. The existing outputs include `Data/Output/Stacked Linkedin Microdata/flows_annual.csv` and the cosine-distance CSV files in `Data/Output/Stacked Linkedin Microdata/cosine distances/`.
 
--   Program `2_Get_Kappas_for_BoardEx.py` caused the application to restart and could not be fully run. Neither `yearly_kappas_2000_2017.parquet` nor `Annual Firmpair Kappas for BoardEx 2000-2017.dta` were produced.
+-   Program `Appendix_C/Leader Panel.R` was not rerun, as its output already existed in the package. The existing output is `Data/Output/Panel_Leaders.csv`. The script can optionally be rerun if the required BoardEx raw-clean files are retained, but skipping it relies on the pre-existing intermediate.
 
--   Program `individual_counts_v3_replication.R` ran without error, producing `firm_level_counts_preaggregation.csv` and `firm_level_counts.csv`.
+-   Program `collusion_connections_regs_v7_replication.R` ran using the pre-existing BoardEx connection panels, agreement timing data, Hoberg-Phillips industry data, common ownership kappas, LinkedIn cosine-distance files, and crosswalk files. It produced the main paper tables and figures in `Outputs/`.
 
--   Program `Leader_Panel.R` ran without error, producing `Panel_Leaders.csv`.
+-   Program `public_firms_sumstats.do` ran as part of Stata Batch 2. It used the pre-existing file `Data/Output/BoardEx_analysis/panel_connections_sumcount_by_company_pairs_company_network_publicfirms_balanced.csv`, along with `clean_compustat.dta`, `tnic3_data.txt`, and `firm_level_counts.csv`. It produced `Cleaned Data for FirmPair SumStats_V2.dta`, `Cleaned Data for Firm SumStats_V2.dta`, and `sumstat_public.tex`.
 
--   Program `Create_regression_sample_2025_bexcompanyid_familyid.do` ran without error, producing `regression_sample_2025_bexcompanyid_familyid.csv`. Required replacing `../..` with `$dirbase` in the path definitions prior to running.
+-   Program `Create regression_sample_2025_bexcompanyid_familyid.do` ran as part of Stata Batch 2. It used `connection_agreement_regdata_treatedfamilies_finalregsample_2025.csv` and `BoardEx_FamilyID_trackable_2025.csv`, and produced `Data/Output/BoardEx_analysis/regression_sample_2025_bexcompanyid_familyid.csv`.
 
--   Program `Create_Sample_Leaders.do` ran without error, producing `Sample_Leaders.csv`. Required replacing `../..` with `$dirbase` in the path definitions prior to running.
+-   Program `Create Sample Leaders.do` ran as part of Stata Batch 2. It used `Data/Output/Panel_Leaders.csv`, `Data/Input/BoardEx_raw_clean/NA - Company Details.csv`, and the regression sample file. It produced `Data/Output/Sample_Leaders.csv`.
 
--   Program `Create_Sample_Common_Leaders.do` did not produce `Sample_Common_Leaders.csv`, as it depends on `panel_connections_by_row_company_network_NA_2025.csv`, which was not produced due to the earlier failure of `boardex_connections_construct_v5_replication.R`.
+-   Program `Create Sample Common Leaders.do` ran as part of Stata Batch 2. It used the balanced company-network connection panel, the relevant crosswalks, and the regression sample. It produced `Data/Output/Sample_Common_Leaders.csv`.
 
--   LinkedIn processing scripts were not provided in the replication package. A subset of their expected outputs were nonetheless present in the package (cosine distance CSVs, deduplication checkpoints, employment and flows chunks, `job_categories_gpt.csv`, `deduplication_directory_2025.csv`, `flows_annual.csv`); however, `linkedin_raw.csv` (synthetic), the ChatGPT job classification raw and processed files (0–49.csv, 0–30.xlsx), and `emp_titles_dedup.csv` were not reproduced.
+-   Program `TC1 Panel leaders stats.do` ran as part of Stata Batch 2. It used `Sample_Leaders.csv` and `Sample_Common_Leaders.csv`, and produced the Table C1 output file `panel_leaders_stats_ned_new_l_by_new_cl_notredundant_wide.csv`.
 
--   Program `collusion_connections_regs_v7_replication.R` failed with the following error, preventing production of all downstream outputs including the regression sample, summary statistics, and all exhibit files:
+-   Program `TC2 Sample pair and firm balance tables.do` ran as part of Stata Batch 2. It used the connection-regression intermediate files and produced the Table C2 balance-table CSV outputs.
 
-    ``` r
-    Error in `[.data.table`(cnx_bal_firm, Agreement == 1, AgreementType_Notes) : 
-      j (the 2nd argument inside [...]) is a single symbol but column name 'AgreementType_Notes' is not found.
-    ```
+-   The LinkedIn processing scripts were not rerun, as their expected outputs already existed in the package. These include `flows_annual.csv` and the cosine-distance CSV files. The package relies on these pre-existing LinkedIn intermediates for the main regression script.
 
--   Program `public_firms_sumstats.do` did not run, as it depends on outputs from `collusion_connections_regs_v7_replication.R` that were not produced. No output produced.
+-   The raw common ownership parquet files in `Data/Input/Common ownership/years/` were not used in the replication run, because the final kappas output `Annual Firmpair Kappas for BoardEx 2000-2017.dta` already existed.
 
--   Programs `TC1_Panel_leaders_stats.do` and `TC2_Sample_pair_and_firm_balance_tables.do` did not run, as they depend on `Sample_Common_Leaders.csv`, which was not produced. No output produced.
+-   The raw BoardEx network files `NA - SMDEs Network.csv` and `NA - Director Network.csv` were not used in the replication run, because the downstream augmented company-network and connection-panel outputs already existed.
+
+-   The raw Compustat input files were not used in the replication run, because the cleaned Compustat outputs already existed.
+
+-   The file `Data/Output/BoardEx_analysis/NA - Company Network - Augmented.csv` was not used downstream. The downstream connection-construction scripts use `Data/Output/BoardEx_analysis/NA - Company Network - Augmented - subset 1990.csv` instead.
 
 ## Tables and Figures
 
--   Discrepancies in Table C1 (see figure below).
+-   Discrepancies in Table 2 (see figure below).
 
-::: {#tab-c1 layout-ncol="2"}
-![Panel A](images/tabc1_p.png)
+::: {#tab-2 layout-ncol="2"}
+![Panel A](images/Captura de pantalla 2026-05-22 112802.png)
 
-![Panel B](images/tabc1_r.png)
+![Panel B](images/Captura de pantalla 2026-05-22 113024.png)
 
-Table C1
+Table 2
 :::
 
--   Discrepancies in Table C2 (see figure below).
+-   Discrepancies in Table 3 (see figure below).
+
+::: {#tab-3 layout-ncol="2"}
+![Panel A](images/Captura de pantalla 2026-05-22 113615.png)
+
+![Panel B](images/Captura de pantalla 2026-05-22 113644.png)
+
+Table 3
+:::
+
+-   Discrepancies in Figure A5 (see figure below).
+
+::: {#fig-a5 layout-ncol="2"}
+![Panel A](images/Captura de pantalla 2026-05-22 114540.png)
+
+![Panel B](images/Captura de pantalla 2026-05-22 114558.png)
+
+Figure A5
+:::
+
+-   Discrepancies in Table A2 (see figure below).
+
+::: {#tab-a2 layout-ncol="2"}
+![Panel A](images/Captura de pantalla 2026-05-22 115415.png)
+
+![Panel B](images/Captura de pantalla 2026-05-22 115429.png)
+
+Table A2
+:::
+
+-   Discrepancies in Table B2 (see figure below).
+
+::: {#tab-b2 layout-ncol="2"}
+![Panel A](images/Captura de pantalla 2026-05-22 115910.png)
+
+![Panel B](images/Captura de pantalla 2026-05-22 115923.png)
+
+Table B2
+:::
+
+-   Discrepancies in Table C2, Labor market overlap row (see figure below).
 
 ::: {#tab-c2 layout-ncol="2"}
-![Panel A](images/tabc2_p.png)
+![Panel A](images/Captura de pantalla 2026-05-22 120708.png)
 
-![Panel B](images/tabc21_r.png)
+![Panel B](images/Captura de pantalla 2026-05-22 121546.png)
 
-![Panel C](images/tabc22_r.png)
+![Panel C](images/Captura de pantalla 2026-05-22 120819.png)
 
-![Panel D](images/tabc23_r.png)
+![Panel D](images/Captura de pantalla 2026-05-22 120853.png)
 
-![Panel E](images/tabc24_r.png)
+![Panel E](images/Captura de pantalla 2026-05-22 120917.png)
 
 Table C2
 :::
 
--   The rest of tables and figures were not reproduced.
+- Table 1 was not reproduced.
+- Note that the manuscript should be updated with the new outputs as per `JPE_replication_response_v2_260501.pdf`. The current one still includes the earlier versions.
 
 ## In-Text Numbers
 
@@ -384,20 +418,20 @@ Table C2
 
 -   [ ] There are in-text numbers, but they are not identified in the code
 
--   I was not able to reproduce any of the in-text numbers.
+-   `table_agreement_counts_family_level.txt` not reproduced. `connection_agreement_crosstab.csv` produces 813, 42, 32, 15 instead of 815, 57 and 47.
 
 # Classification
 
 -   [ ] full reproduction
 -   [ ] full reproduction with minor issues
--   [ ] partial reproduction (see above)
--   [x] not able to reproduce most or all of the results (reasons see above)
+-   [x] partial reproduction (see above)
+-   [ ] not able to reproduce most or all of the results (reasons see above)
 
 ## Reason for incomplete reproducibility
 
 -   [ ] None.
 -   [x] `Discrepancy in output` (either figures or numbers in tables or text differ)
--   [x] `Bugs in code` that were fixable by the replicator (but should be fixed in the final deposit)
+-   [ ] `Bugs in code` that were fixable by the replicator (but should be fixed in the final deposit)
 -   [ ] `Code missing`, in particular if it prevented the replicator from completing the reproducibility check
     -   [ ] `Data preparation code missing` should be checked if the code missing seems to be data preparation code
 -   [ ] `Code not functional` is more severe than a simple bug: it prevented the replicator from completing the reproducibility check
